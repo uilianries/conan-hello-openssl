@@ -14,13 +14,8 @@ env:
   CXX: "g++-6"
   CC: "gcc-6"
 install:
-  - gcc --version
-  - g++ --version
-  - gcc-6 --version
-  - g++-6 --version
   - pip install conan
-  - conan profile new default --detect
-  - conan profile update settings.compiler.version=6 default
+  - conan user
 script:
   - conan install .
   - cmake . -G "Unix Makefiles"
