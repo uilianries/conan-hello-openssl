@@ -16,6 +16,6 @@ install:
   - conan user
 script:
   - conan install .
-  - cmake . -G "Unix makefiles"
+  - cmake . -G "Unix Makefiles"
   - cmake --build .
   - ctest
