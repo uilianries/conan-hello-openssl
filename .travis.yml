@@ -15,7 +15,8 @@ env:
   CC: "gcc-6"
 install:
   - pip install conan
-  - conan user
+  - conan profile new default --detect
+  - conan profile update settings.compiler.version=6 default
 script:
   - conan install .
   - cmake . -G "Unix Makefiles"
